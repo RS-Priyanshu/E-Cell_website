@@ -208,3 +208,53 @@ h4 {
     color: white;
     transform: rotateY(180deg);
 }
+@keyframes raj {
+    from {}
+    to {
+        transform: translateX(300px);
+    }
+}
+
+@keyframes raj1 {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes raj3 {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.three, .seven, .four, .six {
+    animation-duration: 3s;
+    animation-direction: reverse;
+}
+
+.three {
+    animation-name: raj1;
+}
+
+.seven {
+    animation-name: raj;
+}
+
+.four {
+    animation-name: raj1;
+}
+
+.six {
+    animation-name: raj;
+}
+
+.five {
+    animation-name: raj3;
+    animation-delay: 3s;
+    animation-duration: 2s;
+}
