@@ -106,68 +106,85 @@
                         </p>
                     </div>
                 </section>
-                    <section>
-                        <h4>OUR MENTOR</h4>
-                        <div class="flip-card-container">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-12-02 124815.png"
-                                            alt="mentor">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                            ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                            build futures.”</p>
-                                    </div>
+                <section>
+                    <h4>OUR MENTOR</h4>
+                    <div class="flip-card-container">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-12-02 124815.png"
+                                        alt="mentor">
                                 </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.30_34291445.jpg"
-                                            alt="mentor">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                            ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                            build futures.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.29_1b4f0b0f.jpg"
-                                            alt="mentor">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                            ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                            build futures.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.28_724553ba.jpg"
-                                            alt="mentor">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                            ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                            build futures.”</p>
-                                    </div>
+                                <div class="flip-card-back">
+                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
+                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
+                                        build futures.”</p>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.30_34291445.jpg"
+                                        alt="mentor">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
+                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
+                                        build futures.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.29_1b4f0b0f.jpg"
+                                        alt="mentor">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
+                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
+                                        build futures.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.28_724553ba.jpg"
+                                        alt="mentor">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
+                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
+                                        build futures.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 </section>
             </main>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animatedElements = document.querySelectorAll(".three, .four, .five, .six, .seven");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate");
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

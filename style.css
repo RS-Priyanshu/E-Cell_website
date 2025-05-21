@@ -199,7 +199,7 @@ body {
       from { transform: scale(0); }
       to { transform: scale(1); }
     }
-
+/* 
     .three, .seven, .four, .six {
       animation-duration: 3s;
       animation-direction: reverse;
@@ -209,4 +209,33 @@ body {
     .seven { animation-name: raj; }
     .four { animation-name: raj1; }
     .six  { animation-name: raj; }
-    .five { animation-name: raj3; animation-delay: 3s; animation-duration: 2s; }
+    .five { animation-name: raj3; animation-delay: 3s; animation-duration: 2s; } */
+    .three.animate {
+      animation-name: raj1;
+      animation-duration: 2s;
+      animation-direction: reverse;
+    }
+
+    .seven.animate {
+      animation-name: raj;
+      animation-duration: 2s;
+      animation-direction: reverse;
+    }
+
+    .four.animate {
+      animation-name: raj1;
+      animation-duration: 2s;
+      animation-direction: reverse;
+    }
+
+    .six.animate {
+      animation-name: raj;
+      animation-duration: 2s;
+      animation-direction: reverse;
+    }
+
+    .five.animate {
+      animation-name: raj3;
+      animation-delay: 0s;
+      animation-duration: 2s;
+    }
