@@ -113,11 +113,23 @@ body {
       padding-bottom: 2cm;
     }
 
-    .three { padding-left: 4cm; }
-    .four { padding-left: 3cm; }
-    .six  { float: right; padding-right: 5cm; }
-    .seven { float: right; padding-right: 4cm; }
-    .five { float: left; width: 100vw; margin: auto; }
+    .three { 
+      padding-left: 4cm; 
+    }
+    .four { 
+      padding-left: 3cm; 
+    }
+    .six  { 
+      float: right; 
+      padding-right: 5cm; }
+    .seven { 
+      float: right;
+       padding-right: 4cm; 
+      }
+    .five { 
+      width: 100vw; 
+      margin: auto; 
+    }
 
     h4 {
       text-align: center;
@@ -130,6 +142,7 @@ body {
       justify-content: center;
       gap: 70px;
       margin: 40px 0;
+      padding-bottom: 40px;
     }
 
     .flip-card {
@@ -227,13 +240,61 @@ body {
       animation-delay: 0s;
       animation-duration: 2s;
     }
-      .counter-section {
-      text-align: center;
+    
+ .counter-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .counter-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Vertically center text & number */
+      justify-content: center;
       padding: 30px 20px;
+      /* background: rgba(0, 255, 255, 0.08); */
+      border-radius: 16px;
+      /* box-shadow: 0 0 15px #0ff2; */
+      min-width: 200px;
     }
 
     .counter-number {
       font-size: 4rem;
       color: rgb(252, 252, 252);
       text-shadow: 0 0 20px #0ff;
+      margin-bottom: 0.2em;
+    }
+
+    .counter-label {
+      font-size: 2rem;
+      color: rgb(31, 239, 246);
+      margin-top: 0.6em;
+      text-align: center;
+      text-shadow: 0 0 12px #0ff5;
+    }
+
+    .counter-video {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background: rgba(0, 255, 255, 0.08); */
+      border-radius: 16px;
+      /* box-shadow: 0 0 15px #0ff2; */
+      padding: 30px 20px;
+      min-width: 320px;
+      min-height: 210px;
+    }
+
+    .counter-video video {
+      width: 720px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      /* box-shadow: 0 0 18px #0ff6; */
     }
