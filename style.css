@@ -130,7 +130,6 @@ body {
       justify-content: center;
       gap: 70px;
       margin: 40px 0;
-      padding-bottom: 50px;
     }
 
     .flip-card {
@@ -178,7 +177,6 @@ body {
     }
 
     .flip-card-back {
-      /* background-color: rgb(4, 4, 4); */
       color: white;
       transform: rotateY(180deg);
       padding: 20px;
@@ -199,17 +197,7 @@ body {
       from { transform: scale(0); }
       to { transform: scale(1); }
     }
-/* 
-    .three, .seven, .four, .six {
-      animation-duration: 3s;
-      animation-direction: reverse;
-    }
 
-    .three { animation-name: raj1; }
-    .seven { animation-name: raj; }
-    .four { animation-name: raj1; }
-    .six  { animation-name: raj; }
-    .five { animation-name: raj3; animation-delay: 3s; animation-duration: 2s; } */
     .three.animate {
       animation-name: raj1;
       animation-duration: 2s;
@@ -238,4 +226,14 @@ body {
       animation-name: raj3;
       animation-delay: 0s;
       animation-duration: 2s;
+    }
+      .counter-section {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .counter-number {
+      font-size: 4rem;
+      color: rgb(252, 252, 252);
+      text-shadow: 0 0 20px #0ff;
     }
