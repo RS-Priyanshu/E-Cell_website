@@ -1,185 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E CELL</title>
+    <title>E-Cell | IIMT University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="video-container">
-        <video autoplay muted loop id="myVideo">
-            <source src="C:\Users\Raj\Downloads\a4744d0e-6f73-46db-b5de-2434700a5352_wm.mp4" type="video/mp4">
-        </video>
-        <div class="overlay">
-            <header>
-                <nav>
-                    <a href="#" target="_blank">HOME</a>
-                    <a href="#" target="_blank">ABOUT US </a>
-                    <a href="#" target="_blank">INITIATIVES</a>
-                    <a href="#" target="_blank">START UP & PATERNER</a>
-                    <a href="#" target="_blank">CONTACT US</a>
-                    <a href="#" target="_blank">TEAM</a>
+<body class="bg-black text-white">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-text floating">E-Cell IIMT University</div>
+    </div>
+    
+    <!-- 3D Background Container -->
+    <div id="three-container"></div>
+    
+    <!-- Main Content -->
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center content-section">
+            <header class="w-full absolute top-0 py-6">
+                <nav class="flex justify-end space-x-8 pr-12">
+                    <a href="#home" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">HOME</a>
+                    <a href="#about" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">ABOUT US</a>
+                    <a href="#initiatives" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">EVENTS</a>
+                    <a href="#startup-partner" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">START UP & PARTNER</a>
+                    <a href="#contact" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">CONTACT US</a>
+                    <a href="#team" class="text-white hover:text-cyan-300 transition-colors duration-300 font-semibold cursor-none">TEAM</a>
                 </nav>
             </header>
-            <main>
-                <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-03-09 230103.png" width="50px">
-                <section class="asd">
+            
+            <main class="text-center px-4">
+                <div class="floating ">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-03-09 230103.png" width="80" class="mx-auto">
+                </div>
+                 
+                <section class="mb-16">
                     <div>
-                        <h1> ENTREPRENURSHIP CELL</h1>
-                        <H3>IIMT UNIVERSITY</H3>
-                        <H2>YOU COMES TOGETHER WORK TOGETHER &<br> KEEP TOGETHER</H2>
+                        <h1 class="hero-title glitch" data-text="ENTREPRENEURSHIP CELL">ENTREPRENEURSHIP CELL</h1>
+                        <h3 class="hero-subtitle mb-8 glow">IIMT UNIVERSITY</h3>
+                        <h2 class="hero-tagline">YOU COME TOGETHER, WORK TOGETHER &<br> GROWTH TOGETHER</h2>
                     </div>
-                    <button class="button">EXPLOR MORE</button>
-                    <hr>
-                </section>
-                <section>
-                    <div class="two">
-                        <h2>
-                            What We Do??
-                        </h2>
-                        <p>
-                            The E-Cell at IIMT University, Meerut, is a vibrant student-led initiative.<br> It fosters
-                            entrepreneurial spirit, providing resources and mentorship for budding entrepreneurs.<br>
-                            Through events and collaborations, it transforms innovative ideas into businesses.<br> Join
-                            us
-                            at E-Cell, where ideas meet execution.
-                        </p>
-                    </div>
-                    <span class="three">
-                        <img src="C:\Users\Raj\Pictures\Saved Pictures\7.1.0.jpg" alt="EVENTS" width="300">
-                        <h3>
-                            ORGANIZING ENENTS
-                        </h3>
-                        <P wrap>
-                            The E-Cell hosts various events, <br>providing a platform for students to <br>showcase their
-                            entrepreneurial skills and <br>learn from industry experts.
-                        </P>
-                    </span>
-                    <span class="seven">
-                        <img src="C:\Users\Raj\Pictures\Saved Pictures\7.1.0.jpg" alt="EVENTS" width="300">
-                        <h3>
-                            CONDUCTING SEMINARS
-                        </h3>
-                        <p wrap>
-                            The E-Cell arranges seminars with <br>experienced entrepreneurs and business leaders <br>who
-                            share their insights, inspiring <br>students to venture into entrepreneurship.
-                        </p>
-                    </span>
-                    <br>
-                    <span class="four">
-                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2023-10-23 at 00.09.45_862c4357.jpg"
-                            alt="EVENTS" width="300">
-                        <h3>
-                            PROVIDING MONTERSHIP
-                        </h3>
-                        <p>
-                            The E-Cell offers mentorship to <br>students with startup ideas, guiding <br>them through
-                            the
-                            process of transforming <br>their ideas into viable businesses.
-                        </p>
-                    </span>
-                    <span class="six">
-                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2023-10-23 at 00.09.44_7dff96cd.jpg"
-                            alt="EVENTS" width="300">
-                        <h3>
-                            GROUP DISCUSION
-                        </h3>
-                        <p>
-                            The E-Cell organizes group discussions<br> that allow students to brainstorm and <br>refine
-                            their business ideas in a<br> collaborative environment.
-                        </p>
-                    </span>
-                    <br>
-                    <div class="five">
-                        <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2023-10-23 at 00.09.43_84357a3b.jpg"
-                            alt="EVENTS" width="300">
-                        <h3>
-                            ON CAMPUS SESSIONS
-                        </h3>
-                        <p>
-                            The E-Cell conducts on-campus <br>sessions to elevate the skills of students,<br> preparing
-                            them
-                            for the challenges<br> of entrepreneurship.
-                        </p>
-                    </div>
-                </section>
-                   <section>
-          <div class="counter-section" id="counter-section">
-            <div class="counter-box">
-              <div class="counter-number" id="visitor-count">0</div>
-              <div class="counter-label">Total Visitors</div>
-            </div>
-            <div class="counter-video">
-              <video autoplay muted loop id="myVideo2">
-                <source src="C:\Users\Raj\Videos\Captures\WhatsApp Video 2025-05-22 at 00.50.58_c61a2ed6.mp4"
-                  type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </section>
-                <section>
-                    <h4>OUR MENTOR</h4>
-                    <div class="flip-card-container">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-12-02 124815.png"
-                                        alt="mentor">
-                                </div>
-                                <div class="flip-card-back">
-                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                        build futures.”</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.30_34291445.jpg"
-                                        alt="mentor">
-                                </div>
-                                <div class="flip-card-back">
-                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                        build futures.”</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.29_1b4f0b0f.jpg"
-                                        alt="mentor">
-                                </div>
-                                <div class="flip-card-back">
-                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                        build futures.”</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.28_724553ba.jpg"
-                                        alt="mentor">
-                                </div>
-                                <div class="flip-card-back">
-                                    <p>“Fueling dreams with <br>innovation, E-Cell is the<br>crucible where
-                                        ideas<br>transform into reality.<br>We don't just build startups,<br> we
-                                        build futures.”</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 card-3d cursor-none mt-8">
+                        EXPLORE MORE
+                    </button>
                 </section>
             </main>
-        </div>
+        </section>
+        
+        <!-- About Us Section - Clean and Compact -->
+        <section id="about" class="about-section content-section animate-fadeInUp">
+            <div class="about-content">
+                <h2 class="text-4xl font-bold text-center mb-8 glow">ABOUT US</h2>
+                
+                <div class="about-description">
+                    <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+                        The Entrepreneurship Cell (E-Cell) at IIMT University is a dynamic student-driven organization 
+                        dedicated to fostering the entrepreneurial spirit among students. We create an ecosystem that 
+                        nurtures innovation, encourages risk-taking, and transforms ideas into successful ventures.
+                    </p>
+                </div>
+                
+                <!-- First Row: Social Reach and Student Community -->
+                <div class="about-stats mb-12" id="about-stats">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="stat-card cursor-none">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-number" id="social-reach">0</div>
+                            <div class="stat-label">Social Reach</div>
+                        </div>
+                        
+                        <div class="stat-card cursor-none">
+                            <div class="stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-number" id="student-community">0</div>
+                            <div class="stat-label">Student Community</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Row: Startups and Competition Wins -->
+                <div class="about-stats" id="about-stats-row2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="stat-card cursor-none">
+                            <div class="stat-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="stat-number" id="startups">0</div>
+                            <div class="stat-label">Startups</div>
+                        </div>
+                        
+                        <div class="stat-card cursor-none">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-number" id="competition-wins">0</div>
+                            <div class="stat-label">Competition Wins</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What We Do Section -->
+        <section id="initiatives" class="content-section mt-20 animate-fadeInUp">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-8 glow">What We Do??</h2>
+                <p class="text-xl max-w-4xl mx-auto">
+                    The E-Cell at IIMT University, Meerut, is a vibrant student-led initiative.<br> It fosters
+                    entrepreneurial spirit, providing resources and mentorship for budding entrepreneurs.<br>
+                    Through events and collaborations, it transforms innovative ideas into businesses.<br> Join
+                    us at E-Cell, where ideas meet execution.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="card-3d p-8 rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-none">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 142949.png" alt="EVENTS" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">ORGANIZING EVENTS</h3>
+                    <p class="text-lg">
+                        The E-Cell hosts various events, providing a platform for students to showcase their entrepreneurial skills and learn from industry experts.
+                    </p>
+                </div>
+                
+                <div class="card-3d p-8 rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-none">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 143748.png" alt="EVENTS" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">CONDUCTING SEMINARS</h3>
+                    <p class="text-lg">
+                        The E-Cell arranges seminars with experienced entrepreneurs and business leaders who share their insights, inspiring students to venture into entrepreneurship.
+                    </p>
+                </div>
+                
+                <div class="card-3d p-8 rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-none">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 143648.png" alt="EVENTS" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">PROVIDING MENTORSHIP</h3>
+                    <p class="text-lg">
+                        The E-Cell offers mentorship to students with startup ideas, guiding them through the process of transforming their ideas into viable businesses.
+                    </p>
+                </div>
+                
+                <div class="card-3d p-8 rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-none">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 144453.png" alt="EVENTS" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">GROUP DISCUSSIONS</h3>
+                    <p class="text-lg">
+                        The E-Cell organizes group discussions that allow students to brainstorm and refine their business ideas in a collaborative environment.
+                    </p>
+                </div>
+                
+                <div class="card-3d p-8 rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 md:col-span-2 cursor-none">
+                    <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 143201.png" alt="EVENTS" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">ON CAMPUS SESSIONS</h3>
+                    <p class="text-lg">
+                        The E-Cell conducts on-campus sessions to elevate the skills of students, preparing them for the challenges of entrepreneurship.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Counter Section -->
+        <section class="content-section mt-20 animate-fadeInUp">
+            <div class="counter-section" id="counter-section">
+                <div class="counter-box">
+                    <div class="counter-number" id="visitor-count">0</div>
+                    <div class="counter-label">Total Visitors</div>
+                </div>
+                <div class="counter-video">
+                    <video autoplay muted loop id="myVideo2">
+                        <source src="C:\Users\Raj\Videos\Captures\WhatsApp Video 2025-05-22 at 00.50.58_c61a2ed6.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sponsorship Section -->
+        <section class="sponsorship-section content-section mt-20 animate-fadeInUp" id="sponsorship-section">
+            <h2 class="pulse-glow">OUR PARTNERS & SPONSORS</h2>
+            <div class="sponsor-rows-container">
+                <!-- First Row: Right to Left -->
+                <div class="sponsor-row row-1">
+                    <!-- Row 1 Sponsors with official logos -->
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/NASSCOM_logo.svg/1200px-NASSCOM_logo.svg.png" alt="NASSCOM Foundation" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Red_Hat_logo.svg" alt="RedHat" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://veloragigs.com/wp-content/uploads/2023/03/cropped-VeloraGigs-Logo-03-1.png" alt="VeloraGigs" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://mame.net.in/wp-content/uploads/2023/08/IMG_2649-removebg-preview.png" alt="MAME" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://startup.up.gov.in/images/logo/startup_logo.png" alt="Startup UP" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.startupindia.gov.in/content/dam/invest-india/Logos/Startup%20India%20Logo.png" alt="Startup India" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/NASSCOM_logo.svg/1200px-NASSCOM_logo.svg.png" alt="NASSCOM Foundation" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Red_Hat_logo.svg" alt="RedHat" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://veloragigs.com/wp-content/uploads/2023/03/cropped-VeloraGigs-Logo-03-1.png" alt="VeloraGigs" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://mame.net.in/wp-content/uploads/2023/08/IMG_2649-removebg-preview.png" alt="MAME" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://startup.up.gov.in/images/logo/startup_logo.png" alt="Startup UP" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.startupindia.gov.in/content/dam/invest-india/Logos/Startup%20India%20Logo.png" alt="Startup India" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                </div>
+                
+                <!-- Second Row: Left to Right -->
+                <div class="sponsor-row row-2">
+                    <!-- Row 2 Sponsors with official logos -->
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" alt="Intel" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Paytm_logo.png" alt="Paytm" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Flipkart_logo.png" alt="Flipkart" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/AICTE_LOGO.png/220px-AICTE_LOGO.png" alt="AICTE" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://msme.gov.in/sites/default/files/MSME_logo_new.png" alt="MSME" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" alt="Intel" class="logo-img">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Paytm_logo.png" alt="Paytm" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Flipkart_logo.png" alt="Flipkart" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/AICTE_LOGO.png/220px-AICTE_LOGO.png" alt="AICTE" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://msme.gov.in/sites/default/files/MSME_logo_new.png" alt="MSME" class="logo-img colored-logo" style="filter: brightness(1) invert(0);">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Mentor Section -->
+        <section class="content-section mt-20 animate-fadeInUp">
+            <h4 class="text-5xl font-bold text-center mb-12 glow">OUR MENTORS</h4>
+            <div class="flip-card-container">
+                <div class="flip-card cursor-none">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2024-12-02 124815.png" alt="mentor">
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-cyan-700 to-blue-900">
+                            <p class="text-xl">"Fueling dreams with innovation, E-Cell is the crucible where ideas transform into reality. We don't just build startups, we build futures."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card cursor-none">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 142322.png" alt="mentor">
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-cyan-700 to-blue-900">
+                            <p class="text-xl">"Fueling dreams with innovation, E-Cell is the crucible where ideas transform into reality. We don't just build startups, we build futures."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card cursor-none">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="C:\Users\Raj\Pictures\Screenshots\Screenshot 2026-01-01 142431.png" alt="mentor">
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-cyan-700 to-blue-900">
+                            <p class="text-xl">"Fueling dreams with innovation, E-Cell is the crucible where ideas transform into reality. We don't just build startups, we build futures."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card cursor-none">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="C:\Users\Raj\Pictures\Saved Pictures\WhatsApp Image 2025-05-21 at 15.38.28_724553ba.jpg" alt="mentor">
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-cyan-700 to-blue-900">
+                            <p class="text-xl">"Fueling dreams with innovation, E-Cell is the crucible where ideas transform into reality. We don't just build startups, we build futures."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer id="contact" class="content-section mt-20 text-center py-8 bg-gray-900">
+            <p class="text-lg mb-6">© 2023 E-Cell, IIMT University. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-8 mt-4">
+                <a href="#" class="text-cyan-300 hover:text-white transition-colors cursor-none social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-cyan-300 hover:text-white transition-colors cursor-none social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-cyan-300 hover:text-white transition-colors cursor-none social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-cyan-300 hover:text-white transition-colors cursor-none social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-cyan-300 hover:text-white transition-colors cursor-none social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <div class="mt-8 text-gray-400">
+                <p class="text-sm">IIMT University,O pocket ganga nagar meerut mawana road </p>
+                <p class="text-sm">Meerut - 250001, Uttar Pradesh, India</p>
+                <p class="text-sm mt-2">Email: ecell@iimtindia.net | Phone: +91-8707509272</p>
+            </div>
+        </footer>
     </div>
+
     <script src="ecell.js"></script>
 </body>
 
